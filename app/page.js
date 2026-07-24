@@ -1,10 +1,32 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <div
+  style={{
+    width: "100%",
+    display: "flex",
+    justifyContent: "flex-end",
+    marginBottom: "20px",
+  }}
+>
+  <Link
+    href="/about"
+    style={{
+      textDecoration: "none",
+      color: "blue",
+      fontWeight: "bold",
+      fontSize: "18px",
+    }}
+  >
+    About
+  </Link>
+</div>
         <Image
           className={styles.logo}
           src="/next.svg"
